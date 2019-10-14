@@ -1,0 +1,30 @@
+Поправить footer (убрать все стили сделать по центру)
+
+
+поправить header (сделать красиво)
+___
+
+need class for header buttons
+___
+
+
+Страницы:
+order.php?result=1
+order.php?result=0
+profile.php
+register.php
+
+Все страницы в /admin/*
+
+Оформить news на главной странице
+
+page__submit сделать больше в 2 раза
+page__input_disabled (светло-серый фон, нельзя редактировать) на странице profile (если залогинен)
+_____________________________
+admin__form - page__form
+
+admin__header - form__header
+
+admin__input - page__input
+
+admin__button... - page__submit

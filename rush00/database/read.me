@@ -1,0 +1,15 @@
+#format mysql my.cnf file to use mysql_native_password by default
+#insert into ~/.brew/etc/my.cnf
+default-authentication-plugin = mysql_native_password
+
+#create new user
+mysql -uroot -h127.0.0.1 -e "CREATE USER 'owner'@'127.0.0.1' IDENTIFIED WITH mysql_native_password BY 'owner';"
+mysql -uroot -h127.0.0.1 -e "GRANT ALL ON *.* TO 'owner'@'127.0.0.1';"
+
+#frequent debug commands
+mysql -uroot -h127.0.0.1 -e "select user, host, plugin from mysql.user;"
+mysql -uroot -h127.0.0.1 -e "drop user owner@127.0.0.1;"
+
+#inside mysql shell
+use shop;
+show tables;

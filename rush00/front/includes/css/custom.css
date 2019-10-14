@@ -1,0 +1,695 @@
+body {
+    display: flex;
+	flex-direction: column;
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+	color: #212529;
+    text-align: left;
+}
+
+.container {
+	width: 100%;
+	max-width: 1140px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+div {
+	box-sizing: border-box;
+	display: block;
+}
+
+.header {
+	width: 100%;
+	background-color: #00babc;;
+	height: 100px;
+}
+
+.footer {
+
+}
+
+.nav {
+	height: 100%;
+    display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav__sign-up {
+	font-family: 'Futura PT', 'San Francisco', Roboto, 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif;
+	display: inline-block;
+	font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    transition: color .15s;
+	padding: .25rem .5rem;
+    font-size: 1.175rem;
+    line-height: 1.5;
+	border-radius: .2rem;
+	color: white;
+	border-color: white;
+	text-decoration: none;
+}
+
+.nav__sign-up:hover {
+	color: rgb(126, 126, 126);
+	border-color: rgb(126, 126, 126);
+	text-decoration: none;
+}
+
+.nav__sign-in {
+	font-family: 'Futura PT', 'San Francisco', Roboto, 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif;
+	display: inline-block;
+	font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    transition: color .15s;
+	padding: .25rem .5rem;
+    font-size: 1.175rem;
+    line-height: 1.5;
+	border-radius: .2rem;
+	color: white;
+	text-decoration: none;
+}
+
+.nav__sign-in:hover {
+	color: rgb(126, 126, 126);
+}
+
+.nav__logout {
+	font-family: 'Futura PT', 'San Francisco', Roboto, 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif;
+	display: inline-block;
+	font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    transition: color .15s;
+	padding: .25rem .5rem;
+    font-size: 1.175rem;
+    line-height: 1.5;
+	border-radius: .2rem;
+	color: white;
+	text-decoration: none;
+}
+
+.nav__logout:hover {
+	color: rgb(126, 126, 126);
+}
+
+.nav__catalog {
+	font-family: 'Futura PT', 'San Francisco', Roboto, 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif;
+	display: inline-block;
+	font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    transition: color .15s;
+	padding: .25rem .5rem;
+    font-size: 1.175rem;
+    line-height: 1.5;
+	border-radius: .2rem;
+	color: white;
+	text-decoration: none;
+}
+
+.nav__catalog:hover {
+	color: rgb(126, 126, 126);
+}
+
+.nav__profile {
+	font-family: 'Futura PT', 'San Francisco', Roboto, 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif;
+	display: inline-block;
+	font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    transition: color .15s;
+	padding: .25rem .5rem;
+    font-size: 1.175rem;
+    line-height: 1.5;
+	border-radius: .2rem;
+	color: white;
+	text-decoration: none;
+}
+
+.nav__profile:hover {
+	color: rgb(126, 126, 126);
+}
+
+.form__header, .admin__header {
+	font-family: "Futura PT", "Futura", "Helvetica", "Sans serif";
+	color: #202026;
+	margin-left: 100px;
+	font-size: 1.175rem;
+}
+
+.page__form, .admin__form {
+	max-width: 80%;
+	margin-left: 50px;
+}
+
+.btn-group {
+	vertical-align: middle;
+	width: 90%;
+}
+
+.icon {
+	color: black;
+	font-size: 2.5em;
+	color: white;
+}
+
+.content {
+	flex: 1;
+	padding-bottom: 3rem;
+	padding-top: 3rem;
+}
+
+.row {
+	display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+	margin-left: -15px;
+	box-sizing: border-box;
+}
+
+.catalogs__row {
+	display: flex;
+    flex-wrap: nowrap;
+    margin-right: -15px;
+	margin-left: -15px;
+	box-sizing: border-box;
+}
+
+.catalog__categories {
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: column;
+	padding-right: 15px;
+    padding-left: 15px;
+    max-width: 150px;
+}
+
+.catalog__category {
+	color: #67676d;
+	text-decoration: none;
+	font-family: 'Futura PT', 'San Francisco', Roboto, 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif;
+}
+
+.catalog__category:hover {
+	color: #00babc;
+	text-decoration: none;
+	font-family: 'Futura PT', 'San Francisco', Roboto, 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif;
+}
+
+.catalog__products {
+	width: 100%;
+	padding-right: 15px;
+    padding-left: 15px;
+}
+
+.catalog__col {
+	flex-grow: 0;
+	flex-shrink: 0;
+	position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex-basis: 33.3333%;
+    max-width: 33.333333%;
+}
+.catalog__product {
+	position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+	border-radius: .25rem;
+	margin-bottom: 1.5rem;
+	border: 1px solid rgba(0,0,0,.125);
+	box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+}
+
+.catalog__image {
+	width: 100%;
+	height: 240px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.catalog__description {
+	flex: 1 1 auto;
+    padding: 1.25rem;
+}
+
+.catalog__title {
+	max-height: 20px;
+	font-size: 1rem;
+	color: rgb(119, 119, 119);
+}
+
+.catalog__buttons {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	vertical-align: center;
+	
+}
+
+.catalog__add {
+	display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s;
+	padding: .25rem .5rem;
+    font-size: .875rem;
+    line-height: 1.5;
+	border-radius: .2rem;
+	text-decoration: none;
+	color: white;
+	background-color: green;
+    border-color: green;
+}
+
+.catalog__add:hover {
+	color: green;
+	border-color: green;
+	background-color: white;
+	text-decoration: none;
+}
+
+.catalog__more {
+	display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s;
+	padding: .25rem .5rem;
+    font-size: .875rem;
+    line-height: 1.5;
+	border-radius: .2rem;
+	color: #6c757d;
+	border-color: #6c757d;
+	text-decoration: none;
+	margin-left: 5px;
+}
+
+.catalog__more:hover {
+	color: #00babc;
+	border-color: #00babc;
+	text-decoration: none;
+}
+
+.catalog__price {
+	display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+	user-select: none;
+	margin-left: 5px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s;
+	padding: .25rem .5rem;
+    font-size: .875rem;
+    line-height: 1.5;
+	border-radius: .2rem;
+	color: #6c757d;
+	margin-left: auto;
+}
+.catalog__price::after {
+	content: "₳";
+}
+
+.product__photo {
+	display: flex;
+	flex-direction: column;
+}
+
+.product__image {
+	border: 1px solid rgba(0,0,0,.125);
+	box-shadow: 0 .125rem .25rem rgba(0,0,0,.175);
+}
+
+.product__description {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 25px;
+}
+
+.product__title {
+    font-family: "Futura PT", "Futura", "Helvetica", "Sans serif";
+    color: #202026;
+    text-transform: uppercase;
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+}
+
+.product__value {
+	text-align: center;
+	padding-right: 15px;
+	padding-left: 15px;
+	color: #6c757d;
+	text-decoration: none;
+	font-family: 'Futura PT', 'San Francisco', Roboto, 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif;
+}
+
+.product__value_price {
+	padding-right: 15px;
+	padding-left: 15px;
+	color: #6c757d;
+	text-decoration: none;
+	font-family: 'Futura PT', 'San Francisco', Roboto, 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif;
+}
+
+.product__value_price::after {
+	content: "₳";
+}
+
+.product__buttons {
+	margin-top: 25px;
+
+}
+
+.product__buttons:hover {
+	color: #00babc;
+	text-decoration: none;
+}
+
+.product__add {
+	display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    max-width: 100px;
+	border: 1px solid transparent;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s;
+	padding: .25rem .5rem;
+    font-size: .875rem;
+    line-height: 1.5;
+	border-radius: .2rem;
+	text-decoration: none;
+	color: white;
+	background-color: green;
+	border-color: green;
+}
+
+.product__add:hover {
+	color: green;
+	border-color: green;
+	background-color: white;
+	text-decoration: none;
+}
+
+.cart {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.cart__order {
+	display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s;
+	padding: .25rem .5rem;
+    font-size: .875rem;
+    line-height: 1.5;
+	border-radius: .2rem;
+	text-decoration: none;
+	margin-left: 5px;
+}
+
+th {
+	font-family: "Futura PT", "Futura", "Helvetica", "Sans serif";
+    color: #202026;
+    text-transform: uppercase;
+}
+
+td {
+	font-family: "Futura PT", "Futura", "Helvetica", "Sans serif";
+    color: #202026;
+    text-transform: uppercase;
+}
+
+.cart__format {
+	text-align: center;
+}
+
+.cart__table {
+	width: 100%;
+}
+
+.cart__image {
+	border-radius: .2rem;
+	width: 50px;
+	height: 50px;
+}
+
+.cart__increase {
+	display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s;
+	padding: .25rem .5rem;
+    font-size: .875rem;
+    line-height: 1.5;
+	border-radius: .2rem;
+	text-decoration: none;
+	color: white;
+	background-color: green;
+    border-color: #6c757d;
+}
+
+.cart__increase:hover {
+	color: green;
+	border-color: green;
+	background-color: white;
+	text-decoration: none;
+}
+
+.cart__decrease {
+	display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s;
+	padding: .25rem .5rem;
+    font-size: .875rem;
+    line-height: 1.5;
+	border-radius: .2rem;
+	text-decoration: none;
+	color: white;
+	background-color: grey;
+	border-color: #6c757d;
+}
+
+.cart__decrease:hover {
+	color: grey;
+	border-color: grey;
+	background-color: white;
+	text-decoration: none;
+}
+
+.cart__delete {
+	display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s;
+	padding: .25rem .5rem;
+    font-size: .875rem;
+    line-height: 1.5;
+	border-radius: .2rem;
+	text-decoration: none;
+	color: white;
+	background-color: red;
+    border-color: #6c757d;
+}
+
+.cart__delete:hover {
+	color: red;
+	background-color: white;
+    border-color: red;
+}
+
+.cart__sum {
+	display: inline-block;
+	color: #6c757d;
+}
+
+.cart__sum::after {
+	content: "₳";
+}
+
+.cart__clear {
+	font-family: "Futura PT", "Futura", "Helvetica", "Sans serif";
+	color: #202026;
+	margin-top: 30px;
+	margin-top: 30px;
+	max-width: 100px;
+	display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    transition: color .15s;
+	padding: .25rem .5rem;
+    font-size: .875rem;
+    line-height: 1.5;
+	border-radius: .2rem;
+	text-decoration: none;
+	color: white;
+	background-color: red;
+    border-color: white;
+}
+
+.cart__clear:hover {
+	color: red;
+	background-color: white;
+    border-color: red;
+}
+
+.cart__header {
+	font-family: "Futura PT", "Futura", "Helvetica", "Sans serif";
+	color: #202026;
+	margin-top: 30px;
+    text-transform: uppercase;
+}
+
+form {
+	font-family: "Futura PT", "Futura", "Helvetica", "Sans serif";
+    color: #202026;
+	text-transform: uppercase;
+	width: 100%;
+	margin-top: 20px;
+}
+
+.form__group {
+	margin-top: 15px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+}
+
+.form__label {
+	display: inline-block;
+	width: 120px;
+	text-align: right;
+}
+
+.page__input, .admin__input {
+	width: 100%;
+	display: block;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+	transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+	overflow: visible;
+	max-width: 700px;
+	margin-left: 15px;
+}
+
+.page__submit, .admin__button, .admin__button_submit {
+	font-family: "Futura PT", "Futura", "Helvetica", "Sans serif";
+	color: #202026;
+	margin-top: 30px;
+	margin-top: 30px;
+	max-width: 200px;
+	width: 90px;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    transition: color .15s;
+	padding: .25rem .5rem;
+    font-size: 1.075rem;
+    line-height: 1.5;
+	border-radius: .2rem;
+	text-decoration: none;
+	color: white;
+	background-color:#00babc;;
+    border-color: white;
+}
+
+.page__submit:hover {
+	color: #00babc;;
+	background-color: white;
+    border-color: #00babc;;
+}
