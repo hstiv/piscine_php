@@ -1,0 +1,1 @@
+SELECT count(*) AS `nb_susc`, ROUND(AVG(price)) AS `av_susc`, SUM(MOD(duration_sub, 42)) AS `ft` FROM subscription;
