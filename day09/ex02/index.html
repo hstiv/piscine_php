@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>todo</title>
+	<style type="text/css">
+		body {
+			padding: 10px;
+		}
+
+		li {
+			cursor: pointer;
+			margin: 5px;
+			font-size: 20px!important;
+		}
+		
+		#ft_list {
+			border: solid black 1px;
+			border-radius: 5px;
+			display: inline-block;
+			padding: 20px;
+			list-style-type: none;
+		}
+		
+		.btn {
+			background-color: green;
+			color: white;
+			border-radius: 5px;
+			font-size: 20px;
+			cursor: pointer;
+			margin: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div id="ft_list"></div>
+	<button onclick="newElement()" class="btn">New</button>
+	<script src="todo.js"></script>
+</body>
+</html>

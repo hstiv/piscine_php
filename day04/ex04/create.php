@@ -16,28 +16,41 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'OK') {
         $passwd = $_POST['passwd'];
         if (file_exists('../private/passwd') == true) {
             $content = unserialize(file_get_contents('../private/passwd'));
-            if (!is_new($content, $login))
+            if (!is_new($content, $login)) {
+                header('Location: index.html');
                 echo "ERROR\n";
+            }
             else {
                 $content[] = array('login' => $login, 'passwd' => hash('sha256',$passwd));
-                if (!file_put_contents('../private/passwd', serialize($content)))
+                if (!file_put_contents('../private/passwd', serialize($content))) {
+                    header('Location: index.html');
                     echo "ERROR\n";
-                else
+                }
+                else {
+                    header('Location: index.html');
                     echo "OK\n";
+                }
             }
         }
         else {
             if (!file_exists('private'))
-                mkdir('private');
-            if (!file_put_contents('../private/passwd', serialize(array(array('login' => $login, 'passwd' => hash('sha256',$passwd))))))
+                mkdir('../private');
+            if (!file_put_contents('../private/passwd', serialize(array(array('login' => $login, 'passwd' => hash('sha256',$passwd)))))) {
+                header('Location: index.html');
                 echo "ERROR\n";
-            else
+            }
+            else {
+                header('Location: index.html');
                 echo "OK\n";
+            }
         }
     }
     else {
+        header('Location: index.html');
         echo "ERROR\n";
     }
 }
-else
+else {
+    header('Location: index.html');
     echo "ERROR\n";
+}

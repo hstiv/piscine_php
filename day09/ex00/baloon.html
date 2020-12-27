@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Baloon</title>
+	<style type="text/css">
+		#baloon {
+			border-radius: 100%;
+		}
+		.baloon {
+			width: 200px;
+			height: 200px;
+			background-color: red;
+		}
+	</style>
+	<script type="text/javascript">
+		function blow()
+		{
+			var baloon = document.getElementById("baloon");
+			var width = baloon.offsetWidth + 10;
+			var height = baloon.offsetHeight + 10;
+			if (baloon.style.backgroundColor == "red")
+				baloon.style.backgroundColor = "green";
+			else if (baloon.style.backgroundColor == "green")
+				baloon.style.backgroundColor = "blue";
+			else
+				baloon.style.backgroundColor = "red";
+			if (width > 420 && height > 420)
+			{
+				baloon.style.width = "200px";
+				baloon.style.height = "200px";
+			}
+			else
+			{
+				baloon.style.width = width + "px";
+				baloon.style.height = height + "px";
+			}
+		}
+
+		function shrink()
+		{
+			var baloon = document.getElementById("baloon");
+			var width = baloon.offsetWidth - 5;
+			var height = baloon.offsetHeight - 5;
+			if (baloon.style.backgroundColor == "red")
+				baloon.style.backgroundColor = "blue";
+			else if (baloon.style.backgroundColor == "blue")
+				baloon.style.backgroundColor = "green";
+			else
+				baloon.style.backgroundColor = "red";
+			if (width >= 200 && height >= 200)
+			{
+				baloon.style.width = width + "px";
+				baloon.style.height = height + "px";
+			}
+		}
+	</script>
+</head>
+<body>
+	<div style="background-color: red; width:200px; height:200px" id="baloon" onclick="blow()" onmouseleave="shrink()"></div>
+</body>
+</html>
